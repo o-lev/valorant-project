@@ -1,0 +1,753 @@
+/* General (Across all pages) */
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", Arial, sans-serif;
+  background-color: rgb(24 24 24);
+}
+
+main {
+  position: relative;
+  padding: 60px 0;
+}
+
+main .item-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+h1 {
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 5em;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin: 20px;
+}
+
+h2 {
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 3.5em;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin: 10px;
+}
+
+h3 {
+  font-family: valorantFont, Arial, sans-serif;
+  font-size: 2.25em;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin: 5px;
+}
+
+h4 {
+  font-size: 1.25em;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(212 247 103);
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: valorantFont;
+  src: url("Valorant\ Font.ttf") format('truetype');
+}
+
+/* Header */
+header {
+  justify-content: space-between;
+  z-index: 200;
+  background-color: rgb(134 66 228);
+}
+
+header, .navigation-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+
+/* Header - Left Section */
+.left-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 200;
+}
+
+.game-logo {
+  position: relative;
+  z-index: 300;
+  height: 60px;
+  margin: 0 15px;
+}
+
+.game-title {
+  position: relative;
+  z-index: 300;
+  height: 40px;
+  margin: 0 5px;
+  font-family: valorantFont, Arial, sans-serif;
+  font-size: 2.8em;
+  color: rgb(212 247 103);
+}
+
+/* Header - Middle Section (Navigation Menu) */
+.navigation-menu {
+  justify-content: center;
+  z-index: 50;
+}
+
+.navigation-link {
+  height: 35px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 10px;
+  padding: 0 20px;
+  border-radius: 10px;
+  background-color: rgb(212 247 103);
+  color: black;
+  font-weight: bold;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.navigation-link::after {
+  content: '';
+  position: absolute;
+  justify-content: center;
+  width: 50%;
+  height: 4px;
+  bottom: 3px;
+  left: 25%;
+  border-radius: 5px;
+  background-color: rgb(134 66 228);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.navigation-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navigation-link:active {
+  background-color: rgb(134 66 228);
+  color: white;
+  transition: 0.3s;
+}
+
+.navigation-link:active::after {
+  background-color: rgb(212 247 103);
+  transition: 0.3s;
+}
+
+/* Header - Right Section */
+.right-header {
+  position: relative;
+  z-index: 200;
+  margin: 0 20px;
+  padding: 8px 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(212 247 103);
+  font-weight: bold;
+  font-family: "Noto Sans", Arial, sans-serif;
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.right-header:hover {
+  background-color: rgb(212 247 103);
+  background-color: rgba(212 247 103 / 90%);
+}
+
+.right-header:active {
+  background-color: rgb(212 247 103);
+  background-color: rgba(212 247 103 / 75%);
+}
+
+/* Header - Page Width (Dynamic) */
+@media not (width >= 1300px) {
+  .game-title, .right-header {
+    display: none;
+  }
+
+  .navigation-menu {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media not (width >= 815px) {
+  .game-logo {
+    display: none;
+  }
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  padding: 50px 0;
+  width: 100%;
+  background-color: rgb(36 36 36);
+  color: white;
+  white-space: nowrap;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  margin: 0 50px;
+}
+
+footer a {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 0.9em;
+}
+
+footer a:hover {
+  color: rgb(212 247 103);
+  transition: 0.3s;
+}
+
+.email-field {
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 10px;
+  margin: 10px;
+}
+
+.email-field::placeholder {
+  font-family: "Noto Sans", Arial, sans-serif;
+}
+
+.submit-button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-family: "Noto Sans", Arial, sans-serif;
+  background-color: rgb(212 247 103);
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: rgb(212 247 103);
+  background-color: rgba(212 247 103 / 90%);
+}
+
+.submit-button:active {
+  background-color: rgb(212 247 103);
+  background-color: rgba(212 247 103 / 75%);
+}
+
+.copyright {
+  margin: 40px 0;
+  font-size: 0.7em;
+}
+
+/* Content - Home */
+.background-image-overlay {
+  position: relative;
+  z-index: 100;
+}
+
+.background-image {
+  opacity: 40%;
+  width: 100%;
+  height: auto;
+}
+
+.foreground-text {
+  position: absolute;
+  z-index: 200;
+  left: 0;
+  right: 0;
+  top: 40%;
+  text-align: center;
+  color: white;
+  font-size: 5vh;
+  font-weight: bold;
+  line-height: 1.2em;
+}
+
+.foreground-text span {
+  font-family: valorantFont, Arial, sans-serif;
+}
+
+.download-button {
+  padding: 8px 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(212 247 103);
+  font-weight: bold;
+  font-size: 2vh;
+  font-family: "Noto Sans", Arial, sans-serif;
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.download-button:hover {
+  background-color: rgb(212 247 103);
+  background-color: rgba(212 247 103 / 90%);
+}
+
+.download-button:active {
+  background-color: rgb(212 247 103);
+  background-color: rgba(212 247 103 / 75%);
+}
+
+.bundle-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 15px;
+  border: 2px solid white;
+}
+
+.bundle-picture {
+  width: 550px;
+  margin: 0 auto;
+}
+
+.bundle-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15px;
+  color: white;
+}
+
+.bundle-description {
+  padding-right: 7px;
+  text-align: justify;
+  font-size: 0.9em;
+}
+
+/* Content - Game Info */
+.shortcut-bar {
+  min-width: 100px;
+  padding: 25px 10px 0;
+  margin: 0 10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.shortcut-bar:hover {
+  color: rgb(212 247 103);
+}
+
+/* Agents */
+.agent-class-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  color: white;
+}
+
+.agent-class-description {
+  margin-left: 10px;
+}
+
+.agent-item {
+  display: flex;
+  flex: 1;
+  max-width: 342px;
+  flex-direction: column;
+  margin: 1em;
+  border: 2px solid white;
+}
+
+.agent-profile-picture {
+  width: 325px;
+  margin: 0 auto;
+}
+
+.agent-class {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 15px 0;
+  padding-bottom: 5px;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.agent-class-text {
+  margin-left: 5px;
+}
+
+.agent-abilities {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+  align-items: center;
+  margin: 5px;
+  color: white;
+}
+
+.ability-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.agent-abilities-type {
+  margin: 0 10px 0 5px;
+  font-size: 0.75em;
+}
+
+/* Maps */
+.map-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 15px;
+  border: 2px solid white;
+}
+
+.map-picture {
+  width: 550px;
+  margin: 0 auto;
+}
+
+.map-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15px;
+  color: white;
+}
+
+.map-description {
+  padding-right: 7px;
+  text-align: justify;
+  font-size: 0.9em;
+  border-right: 1px solid white;
+}
+
+.map-location {
+  min-width: 80px;
+  font-size: 0.7em;
+  text-align: center;
+  padding-left: 7px;
+}
+
+.map-flag {
+  width: 25px;
+}
+
+/* Weapons */
+.credit-icon-legend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  color: white;
+}
+
+.credit-icon-description {
+  margin-left: 5px;
+}
+
+.weapons-note {
+  color: white;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  margin: 10px;
+}
+
+.weapon-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 1em;
+  border: 2px solid white;
+  position: relative;
+  min-height: 300px;
+  background-color: rgb(46 46 46);
+}
+
+.weapon-picture-small, .weapon-picture-large {
+  width: 300px;
+  margin: auto;
+  height: auto;
+}
+
+.weapon-picture-large {
+  width: 500px;
+}
+
+.weapon-class {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  margin: 15px;
+  color: white;
+}
+
+.credit-amount {
+  margin-left: 10px;
+}
+
+/* Ranked */
+.ranked-tier {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0 0 20px;
+}
+
+.item-container h4 {
+  font-weight: 300;
+}
+
+.ranked-tier div {
+  color: white;
+  font-size: 1.25em;
+  padding: 40px 40px 45px;
+}
+
+.ranked-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 125px;
+  max-width: 200px;
+}
+
+.ranked-item div {
+  color: white;
+  font-size: 0.8em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.ranked-icon {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+}
+
+/* Content - News */
+.main-news .item-container {
+  padding: 1em 0;
+}
+
+.article-container {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  height: 345px;
+  margin: 1em;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.article-thumbnail {
+  margin: 3em 2em;
+  cursor: pointer;
+  transition: 0.75s;
+}
+
+.article-thumbnail:hover {
+  opacity: 0.5;
+}
+
+.read-more {
+  display: flex;
+  position: absolute;
+  left: 45px;
+  bottom: 55px;
+  color: rgb(212 247 103);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.read-more:active {
+  color: rgb(134 66 228);
+}
+
+.article-snapshot {
+  min-width: 275px;
+  padding: 2em;
+  color: white;
+}
+
+.article-snapshot h2 {
+  font-size: 2em;
+  text-align: left;
+  margin: 0;
+}
+
+.article-snapshot p {
+  font-size: 1em;
+  text-align: left;
+  margin: 15px 0;
+}
+
+/* Content - Help */
+.right-sidebar {
+  position: fixed;
+  z-index: 300;
+  top: 60px;
+  right: 0;
+  height: 100%;
+  width: 18%;
+  padding: 0 1%;
+  background-color: rgb(36 36 36);
+}
+
+fieldset {
+  margin: 30px 0;
+  border: 2px solid rgb(212 247 103);
+}
+
+legend {
+  font-size: 1.25em;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+}
+
+label {
+  color: white;
+  line-height: 2em;
+  margin-right: 20px;
+}
+
+form input, textarea {
+  width: 96%;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  border: none;
+  font-family: "Noto Sans", Arial, sans-serif;
+}
+
+input[type="radio"] {
+  width: 10%;
+}
+
+input[type="submit"], input[type="reset"] {
+  width: 100%;
+  padding: 8px 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(212 247 103);
+  font-weight: bold;
+  font-family: "Noto Sans", Arial, sans-serif;
+  transition: 0.15s;
+  cursor: pointer;
+}
+  
+input[type="submit"]:hover {
+  background-color: rgb(212 247 103);
+  background-color: rgba(212 247 103 / 90%);
+}
+  
+input[type="submit"]:active {
+  background-color: rgb(212 247 103);
+  background-color: rgba(212 247 103 / 75%);
+}
+
+input[type="reset"] {
+  background-color: rgb(240 131 131);
+}
+  
+input[type="reset"]:hover {
+  background-color: rgb(240 131 131);
+  background-color: rgba(240 131 131 / 90%);
+}
+  
+input[type="reset"]:active {
+  background-color: rgb(240 131 131);
+  background-color: rgba(240 131 131 / 75%);
+}
+
+.main-help {
+  margin-right: 20%;
+}
+
+.question-box {
+  margin: 0 2%;
+  padding: 20px;
+  width: 96%;
+  border: none;
+  text-align: left;
+  border: none;
+  color: white;
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 1em;
+  background-color: rgb(134 66 228);
+  background-color: rgba(134 66 228 / 70%);
+  cursor: pointer;
+}
+
+.active, .question-box:hover {
+  background-color: rgb(134 66 228);
+  background-color: rgba(134 66 228 / 30%);
+}
+
+.answer-box {
+  display: none;
+  margin: 0 2%;
+  padding: 0 20px;
+  overflow: hidden;
+  background-color: rgb(36 36 36);
+}
+
+.answer-box p {
+  font-size: 1em;
+  text-align: left;
+  color: white;
+}
+
+.answer-box li {
+  color: white;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <title>VALORANT | Help</title>
+    <link rel="icon" href="images/valorant-logo.svg" type="image/svg" sizes="16x16">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/valorant.css" type="text/css">
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <!--Logo and Game Title-->
+      <a href="index.html" target="_self">
+        <div class="left-header">
+          <img class="game-logo" src="images/valorant-logo.svg" alt="Valorant Logo">
+          <div class="game-title">vAlorant</div>
+        </div>
+      </a>
+      <!--Navigation Pane-->
+      <nav class="navigation-menu">
+        <a class="navigation-link" href="index.html" target="_self">HOME</a>
+        <a class="navigation-link" href="game-info.html" target="_self">GAME INFO</a>
+        <a class="navigation-link" href="news.html" target="_self">NEWS</a>
+        <a class="navigation-link" href="help.html" target="_self">HELP</a>
+      </nav>
+      <!--Download Button-->
+      <button class="right-header">DOWNLOAD</button>
+    </header>
+
+    <!--Content-->
+    <!--Contact Form-->
+    <div class="right-sidebar">
+      <form>
+        <fieldset>
+          <legend>Contact Us</legend>
+            <label for="first-name">First Name</label>
+            <input id="first-name" type="text" placeholder="Enter your first name" required>
+
+            <label for="last-name">Last Name</label>
+            <input id="last-name" type="text" placeholder="Enter your last name" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter your email address" required>
+
+            <label>Have you raised a previous request?</label><br>
+            <label>
+              <input id="previous-request-yes" type="radio" name="previous-request" value="Yes" required>Yes
+            </label>
+            <label>
+              <input id="previous-request-no" type="radio" name="previous-request" value="No" required>No
+            </label><br>            
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Type your message" required></textarea>
+
+            <input type="submit" value="Submit">
+
+            <input type="reset" value="Reset">
+
+        </fieldset>
+      </form>
+    </div>
+    <main class="main-help">
+      <h1>FREQUENTLY ASKED QUESTIONS</h1>
+      <p>If you cannot find an answer after looking through this page, please use our contact form.</p>
+
+      <!--FAQ's-->
+        <!--Question 1-->
+        <button class="question-box">How do I install VALORANT?</button>
+        <div class="answer-box">
+          <p>To install VALORANT you must download the Riot Games launcher. To do this, select the 'Download' button in the top right of this website or through the <a href="index.html" target="_self">home page</a>.</p>
+        </div>
+        <!--Question 2-->
+        <button class="question-box">How do I request a refund?</button>
+        <div class="answer-box">
+          <p>Items which have not been taken into at least 1 game and purchased within the last 14 days, can be refunded. This includes:</p>
+          <ul>
+            <li>Unused weapon skins</li>
+            <li>Unused weapon upgrades</li>
+            <li>Unused accessories (like gun buddies)</li>
+            <li>Premium battle passes, and</li>
+            <li>Premium battle pass levels.</li>
+          </ul>
+          <p>You can request a refund through this <a>link</a>.</p>
+        </div>
+        <!--Question 3-->
+        <button class="question-box">How is RR (Rank Rating) calculated?</button>
+        <div class="answer-box">
+          <p>RR (Rank Rating) is a number used to place you in a rank (e.g. Silver, or Platnium, or Immortal). Each completed ranked match will grant you RR. If you win, you will gain RR. If you lose, you will lose RR. How much RR you win or lose is determined by 4 factors:</p>
+          <ol start="1">
+            <li>Match Outcome: (base amount of RR won or lost)</li>
+            <li>Round Differential: (gain or lose extra RR for more comprehensive wins or losses)
+              <ul>
+                <li>Winning 13-2 will give you more RR than winning 13-9</li>
+              </ul>
+            </li>
+            <li>Individual Performance: (performing well will increase RR won or decrease RR lost)</li>
+            <li>Rank Convergence: (RR gained or lost is multiplied by a convergence factor, aka the difference between your MMR (hidden Matchmaking Rank) and rank)
+              <ul>
+                <li>If your rank is below your MMR, your multiplier will be higher (to increase your rank)</li>
+                <li>If your rank is at level with your MMR, your multiplier will be minimal</li>
+                <li>If your rank is higher than your MMR, your multiplier will be higher (to decrease your rank)</li>
+              </ul>
+            </li>
+          </ol>
+          <p>Each Episode, your rank resets to roughly 1 whole rank lower (e.g. if you were Gold 3 at the end of the previous Episode, you will most likely rank Silver 3 at the start of the next Episode).</p>
+        </div>
+        <!--Question 4-->
+        <button class="question-box">Why did I get banned?</button>
+        <div class="answer-box">
+          <p>There are a few ways you can be banned in VALORANT.</p>
+          <ul>
+            <li>AFK (Away From Keyboard) - you are putting your team at a disadvantage by not participating in the rounds.</li>
+            <li>Queue Dodging - by not selecting an agent you are forcing your team to play with 4 players instead of 5.</li>
+            <li>Friendly Fire - by deliberately damaging/eliminating teammates, you are disadvantaging your team.</li>
+            <li>Offensive Language - by using offensive language you are breaking VALORANT's community code.</li>
+          </ul>
+          <p>If you think that you were unfairly banned, raise a ticket <a>here</a>.</p>
+        </div>
+        <!--Question 5-->
+        <button class="question-box">How do I join VALORANT Premier?</button>
+        <div class="answer-box">
+          <p>To play in VALORANT's Premier competition, you must meet the following criteria:</p>
+          <ol start="1">
+            <li>Verify your Riot account through SMS verification</li>
+            <li>Complete at least 1 ranked placement in your account's lifetime</li>
+            <li>You must not have any current bans or restrictions</li>
+          </ol>
+          <p>To create a team, read our dedicated <a>article</a>.</p>
+        </div>
+        <!--Question 6-->
+        <button class="question-box">What are all the acronyms and currencies?</button>
+        <div class="answer-box">
+          <ul>
+            <li>VP = Valorant Points, the main form of currency. This can be purchased with real money to buy things such as gun skins, agent contract tiers, battlepasses, and other cosmetic content.</li>
+            <li>RP = Radianite Points, the secondary form of currency. This can be purchased with real money and used to unlock gun skin upgrades for skins already purchased with VP, such as variants, aminations, and sound effects.</li>
+            <li>XP = Experience Points, the number used to gain progress on the battlepass and active agent contracts. This is rewarded for completing quests and playing matches.</li>
+            <li>AP = Account Points, similar to XP but used to increase your account level. This is rewarded for playing and winning matches.</li>
+            <li>RR = Ranked Rating, the visible number of your ranked points. When you lose and win ranked games, you will lose or gain some amount of RR. Each rank division goes from 0RR to 100R. Reaching 100RR for a rank will promote you to the next rank, while losing a game while at 0RR will demote you to the previous rank.</li>
+            <li>MMR = Matchmaking Rating, the hidden internal number that determines who you get to play with and how much RR you receive.</li>
+            <li>ELO = another name for MMR.</li>
+          </ul>
+        </div>
+        <!--Question 7-->
+        <button class="question-box">Why does the shop refresh every 24 hours?</button>
+        <div class="answer-box">
+          <p>A limited time in game shop is built as a scarcity market. As a player you think that the specific skin you want will only be available every once in a while and if you do not buy it when it pops up in your shop, you may feel like you are missing out.</p>
+          <p>A shop with all the skins may seem better from a player perspective, however Riot's internal revenue team made the decision to keep a limited time shop.</p>
+        </div>
+        <!--Question 8-->
+        <button class="question-box">How does the in match credit system work?</button>
+        <div class="answer-box">
+          <p>On the first round of each half, players each receive 800 credits. They can use this to buy their starting abilities and pistol for the first round. When a player gets an elimination, they receive 200 additional credits for the next round. If any player on the team plants the spike, each player receives 300 additional credits given at the start of the next round.</p>
+          <p>The winning team of the round receives 3,000 credits per player, while the losing team gains 1,300 credits per player. The losing team gains additional 500 credits per person if the team is on a 2x loss streak or 1,000 credits per person for loss streaks of 3x or greater. Attackers who survive a round without planting the spike or defenders who survive a round after the enemy spike explodes have their individual credits reduced to 1,000.</p>
+          <p>Teams receive an additional 5,000 total credits when a player on their team is disconnected and no longer spawning each round.</p>
+        </div>
+      <script>
+        // FAQ Accordion Section
+
+        const questionBox = document.getElementsByClassName("question-box"); // store question boxes into questionBox variable
+
+        for (let i = 0; i < questionBox.length; i++) {
+          questionBox[i].addEventListener("click", function() { // for each questionBox, listen for click
+            this.classList.toggle("active"); // when clicked, make active
+            const answerBox = this.nextElementSibling; // store next element (aka answer boxes) in answerBox variable
+            if (answerBox.style.display === "block") { // if expanded
+              answerBox.style.display = "none"; // hide
+            } else {
+              answerBox.style.display = "block"; // otherwise, expand
+            }
+          });
+        }
+      </script>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <div>
+        <h4>About Us</h4>
+        <a href="news.html">News</a>
+        <a>Shop</a>
+        <a href="help.html">Contact</a>
+        <a>Terms of Service</a>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <input class="email-field" type="email" placeholder="Email Address">
+        <button class="submit-button" type="submit">Sign Up</button>
+        <p class="copyright">All images remain the property of the original artists.</p>
+      </div>
+      <div>
+        <h4>Socials</h4>
+        <a>Instagram</a>
+        <a>Facebook</a>
+        <a>YouTube</a>
+        <a>Twitter</a>
+      </div>
+    </footer>
+  </body>
+</html>
